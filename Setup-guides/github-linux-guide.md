@@ -43,3 +43,16 @@ Add this public key to github server. Open https://github.com/settings/keys and 
 Now run `git remote set-url origin git@github.com:RyShovan/ShareCode.git`
 
 Now you will be able to push repository with ssh.
+
+
+## Changing remote-url protocol
+
+Check the remote url protocol
+`git remote -v`
+
+To use SSH protocol: 
+`git remote set-url origin git@github.com:RyShovan/ShareCode.git`
+
+To use HTTPS protocol: 
+`git remote set-url origin https://github.com/RyShovan/ShareCode.git`
+

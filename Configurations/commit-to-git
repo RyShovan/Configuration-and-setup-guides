@@ -1,0 +1,33 @@
+#!/bin/bash
+# keep this file in "/usr/local/bin" directory.
+
+git status
+echo "---------------------------------------"
+read -p "" temp
+
+git log --stat
+
+git add .
+
+sleep .3
+
+echo "---------------------------------------"
+echo "Enter Commit Comment..."
+read -p ": " CommitComment
+git commit -m "$CommitComment"
+
+echo "---------------------------------------"
+echo "Push repository to git server?"
+read -p "y/n: " PushServer
+
+if [ $PushServer == "y" ] || [ $PushServer == "Y" ]
+then
+git push -u origin master
+elif [ $PushServer == "n" ] || [ $PushServer == "N" ]
+then
+echo "---------------------------------------"
+echo "Not pushing repository to git server..."
+else
+echo "---------------------------------------"
+echo "Wrong Input..."
+fi

@@ -1,6 +1,7 @@
 # Conda Guide
 
 
+
 ## Conda Basics
 
 Verify conda is installed or check version number:
@@ -18,6 +19,8 @@ Update any installed program
 To **update python version** of current virtual environment in conda:
 `conda update python`
 
+
+
 ## Using Environment
 
 Create a new environment named py35, install Python 3.5
@@ -33,7 +36,7 @@ or
 If conda is not added to your path in .bashrc or .zshrc, then activate conda by,
 `source ~/miniconda3/bin/activate` and then you can activate conda virtual environment by `conda activate virtual-env-name`
 
-Get a list of all my environments, active environment is shown with *
+Get a list of all my environments, active environment is shown with 
 `conda env list`
 or
 `conda info --envs`
@@ -65,6 +68,7 @@ Create environment from a text file
 `conda env create --file bio-env.txt`
 
 
+
 ## Finding conda packages
 
 Use conda to search for a package
@@ -73,8 +77,7 @@ Use conda to search for a package
 If you want to see which **python versions are ready to be installed** via conda:
 `conda search python`
 
-See list of all packages in Anaconda
-https://docs.anaconda.com/anaconda/packages/pkg-docs
+See list of [all packages in Anaconda](https://docs.conda.io/en/latest/miniconda.html "Anaconda Packages").
 
 
 
@@ -114,12 +117,15 @@ NOTE: The first version of Python in the list will be executed.
 Show version information for the current active Python
 `which -a python`
 
+
+
 ## Run directly with a version of python without sourcing it
 
 Run the run.py directly from the terminal with a specific version of python
 `/home/user/miniconda3/envs/py36/bin/python3 run.py`
 or
 `/home/user/miniconda3/bin/python3 run.py`
+
 
 
 ## For Bash, Zsh and Fish Shell Configuration
@@ -143,9 +149,6 @@ unset __conda_setup
 # <<< conda initialize <<<
 ```
 
-
-
-
 For Fish Shell add this lines to your `~/.config/fish/config.fish` file.
 
 ```
@@ -155,6 +158,7 @@ eval /home/user/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 ```
 
 - **Just Don't Forget to replace `user` with your `username`.**
+
 
 
 ## Install Conda or Miniconda
