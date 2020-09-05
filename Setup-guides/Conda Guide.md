@@ -1,4 +1,4 @@
-# Conda Cheat Sheet
+# Conda Guide
 
 
 ## Conda Basics
@@ -119,6 +119,6 @@ or
 
 ## Install Conda or Miniconda
 
-I personally prefer miniconda over Conda. Install from [here](https://duckduckgo.com "Miniconda").
+I personally prefer miniconda over Conda. Install from [here](https://docs.conda.io/en/latest/miniconda.html "Miniconda").
 
 Download *Miniconda3-latest-Linux-x86_64.sh* file and run `./Miniconda3-latest-Linux-x86_64.sh` in the terminal.
