@@ -15,6 +15,8 @@ Install a package included in Anaconda:
 Update any installed program
 `conda update PACKAGENAME`
 
+To **update python version** of current virtual environment in conda:
+`conda update python`
 
 ## Using Environment
 
@@ -68,6 +70,9 @@ Create environment from a text file
 Use conda to search for a package
 `conda search PACKAGENAME`
 
+If you want to see which **python versions are ready to be installed** via conda:
+`conda search python`
+
 See list of all packages in Anaconda
 https://docs.anaconda.com/anaconda/packages/pkg-docs
 
@@ -115,6 +120,41 @@ Run the run.py directly from the terminal with a specific version of python
 `/home/user/miniconda3/envs/py36/bin/python3 run.py`
 or
 `/home/user/miniconda3/bin/python3 run.py`
+
+
+## For Bash, Zsh and Fish Shell Configuration
+
+For Bash or Zsh add this code block to .bashrc or .zshrc.
+
+```
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/user/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/user/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/user/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/user/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+```
+
+
+
+
+For Fish Shell add this lines to your `~/.config/fish/config.fish` file.
+
+```
+# >>> conda initialize >>>
+eval /home/user/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+```
+
+- **Just Don't Forget to replace `user` with your `username`.**
 
 
 ## Install Conda or Miniconda
