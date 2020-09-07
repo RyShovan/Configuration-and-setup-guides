@@ -20,6 +20,11 @@ To generate password for jupyter notebook
 `jupyter notebook password`
 
 
+To start jupyter notebook in a specific diretory
+`jupyter notebook --notebook-dir /user/Jupyter/`
+>Replace user with your username.
+
+
 
 ## Notebook Config file
 
@@ -32,6 +37,7 @@ Top open jupyter notebook in only localhost
 To open jupyter notebook in all devices
 `c.NotebookApp.ip = '*'`
 > Note: You have to activate jupyter password facility to properly use this feature.
+
 
 
 ## Shortcuts in Notebook
