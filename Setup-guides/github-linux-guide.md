@@ -56,3 +56,27 @@ To use SSH protocol:
 To use HTTPS protocol: 
 `git remote set-url origin https://github.com/RyShovan/ShareCode.git`
 
+
+## Other Commands
+
+#### Clear cache of local git repository
+
+You can clean git cache of your local directory by running-
+`git rm -r --cached .`
+
+This command is helpful if you added some files to .gitignore file which were already present in the git cache.
+Run the command and then commit.
+
+
+#### Undo a commit and redo
+
+`git commit -m "Some mistake"`
+`git reset HEAD~1`
+or
+`git reset --hard HEAD~1`
+> << edit files as necessary >>
+
+`git add .`
+`git commit -c ORIG_HEAD`
+
+Please follow this [**link**](https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git "Undo a commit in git") for better understanding.
