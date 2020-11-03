@@ -166,3 +166,11 @@ eval /home/user/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 I personally prefer miniconda over Conda. Install from [here](https://docs.conda.io/en/latest/miniconda.html "Miniconda").
 
 Download *Miniconda3-latest-Linux-x86_64.sh* file and run `./Miniconda3-latest-Linux-x86_64.sh` in the terminal.
+
+
+## Clear Cache in Conda or Miniconda
+
+`conda clean`
+
+To remove all index cache, lock files, tarballs, unused cache packages, and source cache, run:
+`conda clean --all`
