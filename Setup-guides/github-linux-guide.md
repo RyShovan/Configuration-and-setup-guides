@@ -27,6 +27,7 @@ At last push the repository to github server.
 
 **This guide is for bash and zsh shell.**
 
+### Legacy method:
 Create a ssh key:
 `ssh-keygen -t rsa -b 4096 -C "put-your-email-id"`
 
@@ -43,6 +44,44 @@ Add this public key to github server. Open https://github.com/settings/keys and 
 Now run `git remote set-url origin git@github.com:RyShovan/ShareCode.git`
 
 Now you will be able to push repository with ssh.
+
+### New Method (More secured)
+- run `ssh-keygen -t ed25519 -C "your_email@example.com"`
+- When you're prompted to "Enter a file in which to save the key", you can press Enter to accept the default file location.
+
+> Enter passphrase (empty for no passphrase): [Type a passphrase]
+
+> Enter same passphrase again: [Type passphrase again]
+
+- Start the ssh-agent in the background.
+
+> $ eval "$(ssh-agent -s)"
+
+- you will get `Agent pid 59566`
+- If you created your key with a different name, or if you are adding an existing key that has a different name, replace id_ed25519 in the command with the name of your private key file.
+
+> ssh-add ~/.ssh/id_ed25519
+
+- Add the SSH public key to your account on GitHub. For more information, see ["Adding a new SSH key to your GitHub account"](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
+
+- Copy the SSH public key to your clipboard.
+
+> $ cat ~/.ssh/id_ed25519.pub
+
+- Then select and copy the contents of the id_ed25519.pub file displayed in the terminal to your clipboard.
+- For testing your SSH connection with github run: `ssh -T git@github.com`
+- You may see a warning like this:
+
+> The authenticity of host 'github.com (IP ADDRESS)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+
+- type `yes` and hit enter.
+- you will get `Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Hi User! You've successfully authenticated, but GitHub does not provide shell access.`
+- that's it. You are done here. Now it should work fine.
+
 
 
 ## Changing remote-url protocol
