@@ -73,7 +73,7 @@ Now you will be able to push repository with ssh.
 - You may see a warning like this:
 
 > The authenticity of host 'github.com (IP ADDRESS)' can't be established.
-ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+ED25519 key fingerprint is SHA256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
 This key is not known by any other names
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 
